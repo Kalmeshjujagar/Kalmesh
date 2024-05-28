@@ -1,25 +1,23 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
 import "./globals.css";
 import { ThemeProvider } from "./provider";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Adrian's Portfolio",
-  description: "Modern & Minimal JS Mastery Portfolio",
+  title: "Kalmesh Jujagar",
+  description: "kalmeshjujagar.com",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface RootLayoutProps {
   children: React.ReactNode;
-}>) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps){
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/jsm-logo.png" sizes="any" />
+        <link rel="icon" href="/profile-pic.png" sizes="any" />
       </head>
       <body className={inter.className}>
         <ThemeProvider
